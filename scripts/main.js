@@ -1,3 +1,6 @@
+/*This javaScript selects specified variables from template4-1.html 
+required results*/
+
 function addNumbers() {
 	//INPUT
 	 let x = parseFloat(document.getElementById('number1').value);
