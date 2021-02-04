@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pounds to kilogram converter</title>
+    <script src="poundsToKilogram.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header>
+	<h1>Convert to Kilogram</h1>
+	<h2>Ayo Ajibola</h2>
+</header>
+<main>
+	<h3>Convert to Kilogram</h3>
+	<label>Enter Number in pounds: <input type="text" id="number"></label>
+  
+	<label><button onclick="poundsToKilogram()">Convert to Kilogram</button></label>
+	<hr>
+	<p><span id="output"></span></p>
+</main>
+<footer>
+	&copy;2021 &bull; Ayo Ajibola &bull; BYU-Idaho &bull; CIT 160
+</footer>
+      
+    
+</body>
+<script>
+	function poundsToKilogram() {
+	//INPUT: x is the number entered by user while y is the conversion factor
+	 let x = parseFloat(document.getElementById("number").value);
+	 const y = 0.453592;
+    //PROCESSING: Convert number to kilogram by multiplying with the constant.
+     let z = x*y;
+	 let r = z.toFixed(1);
+	//OUTPUT: Display the result in kilograms and rounded to 1 decimal place.
+	 document.getElementById("output").innerHTML = r + "Kilograms";}
+</script>
+</html>
+
+
+
