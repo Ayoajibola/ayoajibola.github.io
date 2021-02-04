@@ -7,4 +7,4 @@
      let z = x*y;
 	 let r = z.toFixed(1);
 	//OUTPUT: Display the result in kilograms and rounded to 1 decimal place.
-	 document.getElementById("output").innerHTML = r + "Kilograms";}
+	 document.getElementById("output").innerHTML = r + " Kilograms";}
