@@ -5,10 +5,10 @@
 function calculate() {
     /*INPUT: User provides the numbers to be operated upon and chooses the operator.
 user also inputs the result*/
-    let x = parseFloat(document.getElementById('number1').value)
-    let y = document.getElementById('operator').value
-    let z = parseFloat(document.getElementById('number2').value)
-    let w = parseFloat(document.getElementById('result').value)
+    let x = parseFloat(document.getElementById('number1').value);
+    let y = document.getElementById('operator').value;
+    let z = parseFloat(document.getElementById('number2').value);
+    let w = parseFloat(document.getElementById('result').value);
 
    
    
@@ -19,16 +19,16 @@ user also inputs the result*/
 
     switch (y) {
         case '+':
-            r = x + z
+            r = x + z;
             break
         case '-':
-            r = x - z
+            r = x - z;
             break
         case '/':
-            r = x / z
+            r = x / z;
             break
         case '*':
-            r = x * z
+            r = x * z;
             
     }
  //Compare program result with that of user.
