@@ -32,6 +32,7 @@ user also inputs the result*/
             
     }
  //Compare program result with that of user.
+  //OUTPUT: Indicate if user is right or otherwise.
 
  
     if(r === w) {
@@ -41,5 +42,5 @@ user also inputs the result*/
       document.getElementById('output').innerHTML = "Incorrect!";
     }
     
-    //OUTPUT: Indicate if user is right or otherwise.
+   
 }
