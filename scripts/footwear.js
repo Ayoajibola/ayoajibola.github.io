@@ -4,11 +4,13 @@
    function rightFootWear() {
     
 	/*INPUT: User provides the weather type*/
-	 let x = document.getElementById('selectedWeather').value;
-     
-/*PROCESSING: Program accepts weather conditions input from user and 
-output the appropriate shoes.*/
-    
+	 
+   
+   /*PROCESSING: Program accepts weather conditions input from user and 
+identifies the appropriate shoes.*/
+let x = document.getElementById('selectedWeather').value;
+                    
+//OUTPUT: Displays the appropriate footwear.
                
             if(x === "Hot") {
                 document.getElementById('output').innerHTML = "The correct footwear is sandals!";
@@ -22,11 +24,7 @@ output the appropriate shoes.*/
             } else {
                document.getElementById('output').innerHTML = "The correct footwear is shoes!";
             }
-/*PROCESSING: Program accepts weather conditions input from user and 
-identifies the appropriate shoes.*/
 
-                    
-//OUTPUT: Displays the appropriate footwear.
        
         }
     
