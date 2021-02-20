@@ -9,7 +9,7 @@
   let message;
 
   // PROCESSING
-  if (((month === 0) && (dayOfMonth == 1)){
+  if ((month === 0) && (dayOfMonth == 1)){
     message = document.getElementById('output').innerHTML = 'Sleep In!';
   } else if ((month == 6) && (dayOfMonth == 4)) {
     message = document.getElementById('output').innerHTML = 'Sleep In!';
