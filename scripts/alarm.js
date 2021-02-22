@@ -15,7 +15,7 @@
     message = document.getElementById('output').innerHTML = 'Sleep In!';
   } else if ((month == 11) && (dayOfMonth == 25)) {
     message = document.getElementById('output').innerHTML = 'Sleep In!';
-  } else if ((dayOfWeek == 1) || (dayOfWeek ==  6)) {
+  } else if ((dayOfWeek == 0) || (dayOfWeek ==  6)) {
     message = document.getElementById('output').innerHTML = 'Sleep In!';
    } else {
       message = document.getElementById('output').innerHTML = 'Get Up!';
