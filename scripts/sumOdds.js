@@ -15,5 +15,5 @@ function sumOdds() {
     sum = parseInt((document.getElementById("output").innerHTML = sum));
 
     //OUTPUT Display the sum of the added numbers.
-    alert(sum);
+    alert('The sum of the odd numbers is ' +  sum);
   }
