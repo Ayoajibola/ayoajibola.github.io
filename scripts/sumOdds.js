@@ -13,7 +13,7 @@ function sumOdds() {
     for (let i = 1; i <= n; i += 2) {
       sum += i;
     }
-    sum = parseInt((document.getElementById("output").innerHTML = ('The sum of the odd numbers is ' +  sum)));
+    sum = parseInt((document.getElementById("output").innerHTML = ('The sum of the odd numbers,inclusive, is ' +  sum)));
 
     //OUTPUT Display the sum of the added numbers.
     message = sum;
