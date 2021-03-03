@@ -7,8 +7,7 @@
     Starting with number 1, It is multiplied by 5, the result is displayed
     then the next number 2, and so on*/
 let result = " ";
-let i = 1;
-for (; i <= 12; i++) {
+for (let i = 1; i <= 12; i++) {
   result += "5 x " + i + " = " + 5 * i + "<br>";
 }
 
