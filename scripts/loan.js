@@ -2,23 +2,21 @@
 
 function doPayment() {
   // Input:// Accepts principal, annual rate, number of years and periods per year from user.
-  let principal = parseInt(document.getElementById("principal").value);
+  let a = parseInt(document.getElementById("principal").value);
   let annualRate = parseFloat(document.getElementById("annualRate").value);
   let years = parseInt(document.getElementById("years").value);
-  let periodsPerYear = parseInt(
-    document.getElementById("periodsPerYear").value
-  );
+  let periodsPerYear = parseInt(document.getElementById("periodsPerYear").value);
 
   /* Processing: Call the function computePayment () which computes and returns the payment per period*/
-  let paymentPerPeriod;
+  let paymentPerPeriod = computePayment(principal, annualRate, years, periodsPerYear);
 
   function computePayment(principal, annualRate, years, periodsPerYear) {
 
-    let a = principal;
+   
     let r = annualRate / periodsPerYear;
     let n = years*periodsPerYear;
 
-    paymentPerPeriod = paymentPerPeriod = (a*r)/(1-Math.pow((1+r),(-n))).toFixed(2);
+    paymentPerPeriod = (a*r)/(1-Math.pow((1+r),(-n))).toFixed(2);
 
     return paymentPerPeriod;
   }
