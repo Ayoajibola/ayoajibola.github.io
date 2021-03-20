@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Week 11 Loan Calculator Ayo Ajibola</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <main>
+    <header>
+      <h1>Loan Calculator</h1>
+      <h2>Ayo Ajibola</h2>
+    </header>
+    <body>
+      <label for="principal"
+        >Amount Borrowed<input type="text" id="principal" /></label
+      ><br />
+      <label for="annualRate"
+        >Annual Interest Rate<input type="text" id="annualRate" /></label
+      ><br />
+      <label for="years">Number of years<input type="text" id="years" /></label
+      ><br />
+      <label for="periodsPerYear"
+        >Payments per year<input type="text" id="periodsPerYear"
+      /></label>
+
+      <button type="button" onclick="doPayment()">Compute Payment</button>
+      <br />
+      <label for="numberOfPaymentPaidToDate"
+        >Number of payments to date<input
+          type="text"
+          id="numberOfPaymentPaidToDate" /></label
+      ><br />
+      <button type="button" onclick="doBalance()">Compute Payoff Amount</button>
+
+      <p><span id="output"></span></p>
+    </body>
+    <footer>
+      &copy;2021 &bull; Ayo Ajibola &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </main>
+  <script src="scripts/loan.js"></script>
+</html>

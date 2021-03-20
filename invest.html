@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Week 11 Investment Calculator Ayo Ajibola</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <main>
+    <header>
+      <h1>Investment Calculator</h1>
+      <h2>Ayo Ajibola</h2>
+    </header>
+    <body>
+      <label for="principal"
+        >Amount Invested<input type="text" id="principal" /></label
+      ><br />
+      <label for="annualRate"
+        >Annual Rate<input type="text" id="annualRate" /></label
+      ><br />
+      <label for="years">Number of years<input type="text" id="years" /></label
+      ><br />
+      <label for="periodsPerYear"
+        >Periods per year<input type="text" id="periodsPerYear"
+      /></label>
+
+      <button type="button" onclick="doFV()">Compute Future value</button>
+      <p><span id="output"></span></p>
+    </body>
+    <footer>
+      &copy;2021 &bull; Ayo Ajibola &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </main>
+  <script src="scripts/invest.js"></script>
+</html>
