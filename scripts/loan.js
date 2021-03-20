@@ -5,34 +5,38 @@ function doPayment() {
   let principal = parseInt(document.getElementById("principal").value);
   let annualRate = parseFloat(document.getElementById("annualRate").value);
   let years = parseInt(document.getElementById("years").value);
-  let periodsPerYear = parseInt(document.getElementById("periodsPerYear").value);
-
-  /* Processing: Call the function computePayment () which computes and returns the payment per period*/
+  let periodsPerYear = parseInt(
+    document.getElementById("periodsPerYear").value
+  );
   let p = computePayment(principal, annualRate, years, periodsPerYear);
 
+  /* Processing: Call the function computePayment () which computes and returns the payment per period*/
+
   function computePayment(principal, annualRate, years, periodsPerYear) {
+    let r = annualRate / periodsPerYear;
+    let n = years * periodsPerYear;
 
-    let r = annualRate/periodsPerYear;
-    let n = years*periodsPerYear;
-
-    p = (principal*r)/(1-Math.pow((1+r),(-n))).toFixed(2);
+    let p = ((principal * r) / (1 - Math.pow(1 + r, -n))).toFixed(2);
 
     return p;
   }
 
   /* Output: */
   document.getElementById("output").innerHTML =
-    "The payment per period is " + paymentPerPeriod;
+    "The payment per period is " + p;
 }
 
 function doBalance() {
   let principal = parseInt(document.getElementById("principal").value);
   let annualRate = parseFloat(document.getElementById("annualRate").value);
   let years = parseInt(document.getElementById("years").value);
-  let periodsPerYear = parseInt(document.getElementById("periodsPerYear").value);
+  let periodsPerYear = parseInt(
+    document.getElementById("periodsPerYear").value
+  );
 
   /* This function calculates the remaining payment balance after certain number of payments
-   */
+
+     */
 
   // Input:// Accepts principal, annual rate, number of years and periods per year from user.
   // Accepts output from function doPayment() as additional input.
@@ -53,15 +57,15 @@ function doBalance() {
     periodsPerYear,
     numberOfPaymentPaidToDate
   ) {
-
     let a = principal;
     let r = annualRate / periodsPerYear;
-    
-    
-    d = numberOfPaymentPaidToDate;
+    let n = years * periodsPerYear;
 
-    
-    balance = ((a*(1+r)**d)-(p*(1+r)**d-1)/r).toFixed(2);
+    let d = parseInt(
+      document.getElementById("numberOfPaymentPaidToDate").value
+    );
+    let p = ((principal * r) / (1 - Math.pow(1 + r, -n))).toFixed(2);
+    let balance = (a * (1 + r) ** d - (p * (1 + r) ** d - 1) / r).toFixed(2);
 
     return balance;
   }

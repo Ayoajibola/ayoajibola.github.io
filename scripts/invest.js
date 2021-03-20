@@ -6,9 +6,7 @@
         let principal = parseInt(document.getElementById("principal").value);
         let annualRate = parseFloat(document.getElementById("annualRate").value);
         let years = parseInt(document.getElementById("years").value);
-        let periodsPerYear = parseInt(
-          document.getElementById("periodsPerYear").value
-        );
+        let periodsPerYear = parseInt(document.getElementById("periodsPerYear").value);
   
         /* Processing: Call the function computeFutureValue () which computes and returns the future
          value of an investment. */
