@@ -46,9 +46,8 @@ function doBalance() {
     numberOfPaymentPaidToDate
   ) {
     let paymentPerPeriod = (
-      (principal * (annualRate / periodsPerYear)) /
-      (1 - (1 + (annualRate / periodsPerYear) ** -(years * periodsPerYear)))
-    ).toFixed(2);
+      (principal * (annualRate / periodsPerYear))/(1 - (Math.pow(1 + (annualRate / periodsPerYear), -(years * periodsPerYear))
+      .toFixed(2);
 
     balance = (
       principal *
