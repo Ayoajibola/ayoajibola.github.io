@@ -65,7 +65,10 @@ function doBalance() {
       document.getElementById("numberOfPaymentPaidToDate").value
     );
     let p = ((principal * r) / (1 - Math.pow(1 + r, -n))).toFixed(2);
-    let balance = (a * (1 + r) ** d - (p * (1 + r) ** d - 1) / r).toFixed(2);
+    let balance = (
+      a * Math.pow(1 + r, d) -
+      (p * Math.pow(1 + r, d) - 1) / r
+    ).toFixed(2);
 
     return balance;
   }
