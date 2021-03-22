@@ -40,7 +40,6 @@ function doBalance() {
 
   // Input:// Accepts principal, annual rate, number of years and periods per year from user.
   // Accepts output from function doPayment() as additional input.
-  let d = parseInt(document.getElementById("numberOfPaymentPaidToDate").value);
 
   let balance = computeBalance(
     principal,
@@ -65,11 +64,11 @@ function doBalance() {
       document.getElementById("numberOfPaymentPaidToDate").value
     );
     let p = ((principal * r) / (1 - Math.pow(1 + r, -n))).toFixed(2);
-    let balance = (
-      a * Math.pow(1 + r, d) -
-      (p * Math.pow(1 + r, d) - 1) / r
-    ).toFixed(2);
+    
 
+    let balance = (a * Math.pow(1 + r, d) - (p *(Math.pow(1 + r, d) - 1)) / r ).toFixed(2);
+
+    
     return balance;
   }
 
