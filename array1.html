@@ -11,7 +11,9 @@
       <h2>Ayo Ajibola</h2>
     </header>
     <main>
-      <button type="button" onclick="test()">Display the end sums and middle elements</button>
+      <button type="button" onclick="test()">
+        Array end sums and middle elements
+      </button>
       <p><span id="output"></span></p>
     </main>
     <footer>
@@ -42,24 +44,28 @@
       // Display the output string for the user to see.
       document.getElementById("output").innerHTML = output;
 
-     //This function adds up the first and last element of an array.
+      //This function adds up the first and last element of an array.
       function addEnds(list) {
-        let sum = list[0] + list[list.lenght - 1];
-
+        //INPUT: Input provided by function test().
+        //Processing: Identify the first and last element.
+        //then add together.
+        let sum = list[0] + list[list.length - 1];
+        //OUTPUT: Return result to the call point.
         return sum;
       }
 
       //This function determines the middle element of an array.
-     
       function getMiddle(list) {
-        //Determine if array lenght is odd, then find the middle number.
-        if (list.lenght % 2 != 0) {
-          let mid = list[(list.lenght + 1) / 2];
+        //INPUT: Input provided by function test().
+        //Processing: Determine if array lenght is odd or even,
+        //then find the middle number.
+        if (list.length % 2 != 0) {
+          let mid = list[(list.length + 1) / 2];
         } else {
-          let mid = (list[list.lenght / 2] + list[list.lenght / 2 + 1]) / 2;
+          let mid = (list[list.length / 2] + list[list.length / 2 + 1]) / 2;
+          // Output: Return result to call point.
           return mid;
         }
-        
       }
     }
   </script>
