@@ -36,7 +36,7 @@ function test() {
     //INPUT: Input provided by function test().
     //Processing: Determine if array lenght is odd or even,
     //then find the middle number.
-    // sampleArray[0 1 2 3 4 5]
+   
     if (list.length % 2 == 0) {
       let mid = (list[list.length / 2] + list[list.length / 2 - 1]) / 2;
       return mid;
