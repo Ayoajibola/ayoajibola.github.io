@@ -1,32 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>COMM 160 Fixed Loops</title>
+    <title>Week 13 Array2 Ayo Ajibola</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <header>
-    <h1>Week 8: COMM 160 Fixed Loops</h1>
-    <h2>Ayo Ajibola</h2>
-  </header>
-  <main>
-    
-    <label for="number">Enter number<input type="text" id="number"/></label><br>
-    <label for="power">Enter power<input type="text" id="power"/></label><br>
-    <button type="button" onclick="calculatePower()">Calculate Power value</button>
-    <p><span id="output"></span></p>
-  </main>
-  <footer>&copy;2021 &bull; Ayo Ajibola &bull; BYU-Idaho &bull; CIT 160</footer>
+  <body>
+    <header>
+      <h1>Week 13 Arrays</h1>
+      <h2>Ayo Ajibola</h2>
+    </header>
+    <main>
+      <button type="button" onclick="test()">Display test results</button>
+      <p><span id="output"></span></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Ayo Ajibola &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+            /* Defining Table
+             * Input: no user input
+             * Processing: Test the countEvens and multiply functions by calling them.
+             * Output: The values returned from the countEvens and multiply functions.
+             */
+            function test() {
+              let list1 = [17, 8, 9, 5, 20];
+              let list2 = [12, 4, 8, 15, 17, 5, 20, 11];
 
-  <script>
-function calculatePower() {
-    let x = parseInt(document.getElementById('number').value);
-    let y = parseInt(document.getElementById('power').value);
-    let z = Math.pow(1+x,y);
-    document.getElementById('output').innerHTML=z;
+              // Test the countEvens function by calling it two times.
+              let count1 = countEvens(list1);
+              let count2 = countEvens(list2);
 
-}
-    
-  </script>
+              // Test the multiply function by calling it two times.
+              let mult1 = multiply(list1, 3);
+              let mult2 = multiply(list2, 4);
+
+              // Build a string to display to the user.
+              let output = count1 + "<br>" + count2 + "<br>" + mult1 + "<br>" + mult2;
+
+              // Display the output string for the user to see.
+              document.getElementById("output").innerHTML = output;
+            }
+
+              function countEvens(list) {
+                //This function counts and returns the number of even integers in an array.
+                let count = 0;
+
+                for (let i = 0; i < list.length; i++) {
+                  if (list[i] % 2 == 0) {
+                    count = count + 1;
+                  } else {
+                    continue;
+                  }
+                }
+                return count;
+              }
+
+              function multiply(list, multiplier) {
+                  let mult = [];
+                for (let i = 0; i < list.length; i++) {
+
+                  let swap = list[i];
+              list[i] = mult[i];
+              mult[i]= swap;
+
+                }
+      return mult;
+            }
+
+              //function to multiply each element in an array by some value and to return the products in an array.
+              //INPUT passed in from test() function
+              //PROCESSING
+              // multiply each element of the array by the multiplier and replace the element with the product in a new array.
+    </script>
+  </body>
 </html>
